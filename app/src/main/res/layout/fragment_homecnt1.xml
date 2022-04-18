@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_60sdp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/search_home_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/header_bg" />
+
+            <include
+                android:id="@+id/toolbar_v_one"
+                layout="@layout/toolbar_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/search_lo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar_v_one"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_25sdp"
+                android:paddingLeft="@dimen/_25sdp"
+                android:paddingEnd="@dimen/_25sdp"
+                android:paddingRight="@dimen/_25sdp"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/search_edt"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:cursorVisible="true"
+                    android:drawableEnd="@drawable/search_icon"
+                    android:drawableRight="@drawable/search_icon"
+                    android:drawableTint="@color/black"
+                    android:fitsSystemWindows="true"
+                    android:hint="Find your cravings"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textNoSuggestions"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/text_color"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_15sdp"
+                    android:visibility="visible"
+                     />
+
+                <View
+                    android:id="@+id/white_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@+id/search_edt"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@color/black" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/homePage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:layout_margin="@dimen/_10sdp"
+        android:layout_below="@+id/search_home_lo"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <RelativeLayout
+            android:id="@+id/llimgdetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+
+            >
+
+
+            <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.viewpager.widget.ViewPager>
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabDots"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Got something in mind?"
+            android:layout_gravity="center">
+
+        </TextView>
+        <RelativeLayout
+            android:id="@+id/rlimg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/nuts"
+                android:scaleType="fitXY">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/savories"
+             android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlimg1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bites"
+
+            android:scaleType="fitXY">
+
+        </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pies"
+
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlimg2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/candies"
+
+            android:scaleType="fitXY">
+
+        </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/puddings"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/scoopeddesserts"
+
+            android:scaleType="fitXY">
+
+        </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCOOPED DESSERTS"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cakes"
+
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CAKES"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/nuts"
+
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nuts_fruits"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bites"
+
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BITES"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/candies"
+
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/candies_sugar"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/nuts"
+
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/savories"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bites"
+
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pies"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/candies"
+
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/puddings"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/sweetpastries"
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eastern"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/nuts"
+
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pancakes"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bites"
+
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diya_5"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/candies"
+
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gath"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/sweetpastries"
+                android:scaleType="fitXY">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/accessories"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center">
+
+            </TextView>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+
+</RelativeLayout>

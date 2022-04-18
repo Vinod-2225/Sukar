@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.OrderscontinuesFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/header_bg" />
+
+        <include
+            android:id="@+id/toolbar_v_one"
+            layout="@layout/toolbar_v_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/btnback"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/backicon"
+            android:layout_marginLeft="@dimen/_10sdp"
+            >
+
+        </ImageView>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORDERS"
+            android:layout_marginTop="@dimen/_30sdp"
+           android:layout_centerVertical="true"
+            android:textSize="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_110sdp"
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/map"
+        android:layout_below="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/mapimg">
+
+        </ImageView>
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_below="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView
+        android:id="@+id/away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your order is 3 minutes away"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/_80sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectanglebg"
+        android:layout_below="@+id/away"
+        android:layout_margin="@dimen/_10sdp"
+       >
+
+
+    <TextView
+        android:id="@+id/oderrll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Details"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+android:layout_marginLeft="@dimen/_10sdp"
+android:layout_alignParentLeft="true"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mon 21/09/2020 4:56PM"
+android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+       android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/stus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STATUS"
+        android:layout_below="@+id/oderrll"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/outofdel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OUT FOR DELIVERY"
+        android:layout_below="@+id/stus"
+        android:textColor="#4CAF50"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/lulu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lulu Cherie"
+        android:layout_below="@+id/outofdel"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/chocho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6 Choco Brownwich"
+        android:layout_below="@+id/lulu"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.250KD"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_below="@+id/lulu"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/requests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Special requests"
+        android:layout_below="@+id/chocho"
+
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Fee"
+        android:layout_below="@+id/requests"
+android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.000KD"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_below="@+id/requests"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/ordertot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER TOTAL"
+        android:layout_below="@+id/fee"
+      android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/kdtot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.250KD"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_below="@+id/fee"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>
+</RelativeLayout>

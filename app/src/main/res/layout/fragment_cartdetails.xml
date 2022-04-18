@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="0dp"
+    tools:context=".fragments.CartFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/header_bg" />
+
+                <include
+                    android:id="@+id/toolbar_v_one"
+                    layout="@layout/toolbar_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="CART"
+                    android:textSize="@dimen/_25sdp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rl">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rlm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginLeft="@dimen/_20sdp">
+
+                        <ImageView
+                            android:id="@+id/roserl"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:src="@drawable/wishlistimg"
+
+                            >
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/rose"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/roserl"
+                            android:gravity="left"
+                            android:text="Straberry Rose Dout"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/bakery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rose"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/roserl"
+                            android:gravity="left"
+                            android:text="November Bakery"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/bakery"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/roserl"
+                            android:gravity="left"
+                            android:text="Size"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/m"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/bakery"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/size"
+                            android:gravity="left"
+                            android:text="M"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/quantite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/size"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/roserl"
+                            android:gravity="left"
+                            android:text="Quantity : "
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/three"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/size"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/quantite"
+                            android:gravity="left"
+                            android:text="3 +"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/kwdtot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/quantite"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/roserl"
+                            android:gravity="left"
+                            android:text="KWD 3.000"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/optinal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_below="@+id/rlm"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="top"
+                        android:background="@drawable/rectanglebg"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:hint="Special Request (Optional)">
+
+                    </EditText>
+
+                    <RelativeLayout
+                        android:id="@+id/btns"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/optinal"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/fristbtn"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/btn">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="REMOVE"
+
+                                android:textSize="@dimen/_10sdp">
+
+                            </TextView>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wishlistrl"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginLeft="@dimen/_50sdp"
+                            android:layout_toRightOf="@+id/fristbtn"
+                            android:background="@drawable/btn">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="WISHLIST"
+
+                                android:textSize="@dimen/_10sdp">
+
+                            </TextView>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@+id/btns"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/black">
+
+                    </TextView>
+
+                    <RelativeLayout
+                        android:id="@+id/rlm2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/view"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/roserl2"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:src="@drawable/whishlistimg1"
+
+                            >
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/rose2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/roserl2"
+                            android:gravity="left"
+                            android:text="Green Almond Dragees"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/bakery2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rose2"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/roserl2"
+                            android:gravity="left"
+                            android:text="November Bakery"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/size2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/bakery2"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/roserl2"
+                            android:gravity="left"
+                            android:text="Size"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/m2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/bakery2"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/size2"
+                            android:gravity="left"
+                            android:text="M"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/quantite2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/size2"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/roserl2"
+                            android:gravity="left"
+                            android:text="Quantity : "
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/three2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/size2"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/quantite2"
+                            android:gravity="left"
+                            android:text="3 +"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/kwdtot2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/quantite2"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/roserl2"
+                            android:gravity="left"
+                            android:text="KWD 1.000"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/optinal2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_below="@+id/rlm2"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@drawable/rectanglebg"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:hint="Special Request (Optional)">
+
+                    </EditText>
+
+                    <RelativeLayout
+                        android:id="@+id/btns2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/optinal2"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/fristbtn2"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/btn">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="REMOVE"
+
+                                android:textSize="@dimen/_10sdp">
+
+                            </TextView>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wishlistrl2"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginLeft="@dimen/_50sdp"
+                            android:layout_toRightOf="@+id/fristbtn2"
+                            android:background="@drawable/btn">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="WISHLIST"
+
+                                android:textSize="@dimen/_10sdp">
+
+                            </TextView>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@+id/btns2"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/black">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view2"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:gravity="left"
+                        android:text="Delivery Options"
+                        android:textSize="@dimen/_15sdp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/timeo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/delivery"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:background="@drawable/rectanglebg"
+                        android:gravity="left"
+                        android:padding="@dimen/_5sdp"
+                        android:hint="yyyy-MM-dd"
+                        android:textSize="@dimen/_15sdp">
+
+                    </TextView>
+
+                    <Spinner
+                        android:id="@+id/timet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/delivery"
+                        android:layout_marginLeft="@dimen/_50sdp"
+                        android:layout_toRightOf="@+id/timeo"
+                        android:background="@drawable/rectanglebg"
+                        android:gravity="left"
+                        android:entries="@array/timings"
+                        android:spinnerMode="dropdown"
+                        android:padding="@dimen/_5sdp"
+                        android:hint="Time"
+                        android:textSize="@dimen/_15sdp">
+
+                    </Spinner>
+
+                    <RelativeLayout
+                        android:id="@+id/tirl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/timeo">
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="left"
+                            android:text="Subtotal"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/kwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:layout_toRightOf="@id/total"
+                            android:gravity="right"
+                            android:text="KWD 3.000"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/discountrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tirl">
+
+                        <TextView
+                            android:id="@+id/discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+
+                            android:gravity="left"
+                            android:text="Discount Code"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/empty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:layout_toRightOf="@id/discount"
+                            android:gravity="right"
+
+                            android:background="@drawable/rectanglebg"
+                            android:textSize="@dimen/_15sdp">
+
+                        </EditText>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/orderrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/discountrl">
+
+                        <TextView
+                            android:id="@+id/order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="left"
+                            android:text="Order Total"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/kwdo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:layout_toRightOf="@id/order"
+                            android:gravity="right"
+                            android:text="KWD 3.000"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp">
+
+                        </TextView>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/checkll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/sand"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/skip_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_10sdp"
+            android:text="CHECK OUT"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            />
+    </LinearLayout>
+</RelativeLayout>

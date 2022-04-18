@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/header_bg" />
+
+        <include
+            android:id="@+id/toolbar_v_one"
+            layout="@layout/toolbar_v_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/btnback"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/backicon"
+            android:layout_marginLeft="@dimen/_10sdp"
+            >
+
+        </ImageView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ABOUT US"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btnback"
+            android:textSize="@dimen/_15sdp"
+
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/abouttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABOUT US"
+        android:textColor="@color/black"
+      android:layout_margin="@dimen/_10sdp"
+        android:layout_below="@+id/rl"
+        android:textSize="@dimen/_15sdp"
+
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/aboutus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Craving dessert?Discover with Sukar all the restaurants near you and get it delivered to your address in a single checkout!"
+        android:layout_below="@+id/abouttitle"
+        android:layout_margin="@dimen/_10sdp"
+        >
+
+    </TextView>
+</RelativeLayout>

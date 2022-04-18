@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/productImgLayout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:padding="2dp"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/productImg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/productImgLayout"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/lblProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Strawberry Rose Donut"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:singleLine="true"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="0dp"/>
+
+
+            <TextView
+                android:id="@+id/lblShopName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="November Bakery"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:singleLine="true"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="0dp"/>
+
+            <TextView
+                android:id="@+id/lblSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Size M"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:singleLine="true"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="0dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/quantityTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quantity"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <Button
+                    android:id="@+id/minusBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:text="-"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+
+                <TextView
+                    android:id="@+id/lblQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="1"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center"/>
+
+
+                <Button
+                    android:id="@+id/plusBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:text="+"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KWD 3.000"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:fontFamily="@font/avenir_next_regular"
+                android:singleLine="true"
+                android:layout_marginTop="5dp"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btnRemove"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/remove"
+            android:textSize="14sp"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:fontFamily="@font/avenir_next_regular"
+            android:background="@drawable/btn_bg_2"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_margin="10dp"/>
+
+
+        <Button
+            android:id="@+id/btnWhislist"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/wishlist"
+            android:textSize="14sp"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:fontFamily="@font/avenir_next_regular"
+            android:background="@drawable/btn_bg_2"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B6A792"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+
+    </View>
+
+    <EditText
+        android:id="@+id/specialRequestsEdit"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:hint="Special Requests (optional)"
+        android:fontFamily="@font/avenir_next_regular"
+        android:background="@drawable/edit_text_bg_1"
+        android:padding="8dp"
+        android:layout_margin="10dp"
+        android:gravity="left"/>
+
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<resources>
+    <string name="app_name">Sukar</string>
+    <string name="login">LOG IN</string>
+    <string name="email_id">Email Address</string>
+    <string name="pwd">Password</string>
+    <string name="forgot_pwd">Forgot Password?</string>
+    <string name="reset">Reset</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="note_txt">* Please confirm your email before login</string>
+    <string name="or_login">OR SIGN IN WITH</string>
+    <string name="skip">SKIP</string>
+    <string name="already_have">Already have an account?</string>
+    <string name="register_sukar">SIGN UP</string>
+    <string name="choose_lang">Choose your Language</string>
+    <string name="english">ENGLISH</string>
+    <string name="arabic">ّالعربية</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="mobile_no">Mobile Number</string>
+    <string name="password_rules">Your password must contain atleast one uppercase letter, one number, one special character and must be of 20 characters maximum</string>
+    <string name="create_pwd">Password</string>
+    <string name="confirm_pwd">Confirm Password</string>
+    <string name="register_now">REGISTER NOW</string>
+    <string name="by_register">By registering, you agree with our</string>
+    <string name="terms_and_condt">terms and conditions</string>
+    <string name="home">Home</string>
+    <string name="wishlist">Whishlist</string>
+    <string name="cart">Cart</string>
+    <string name="account">Account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="companyname">Company Name</string>
+    <string name="contactnor">Contact Number</string>
+    <string name="etemail">Enter Email</string>
+    <string name="terms_condit">TERMS AND CONDITIONS</string>
+    <string name="termstv">Welcome to Sukar! These terms and conditions outline the values and regulations for the use of Sukar\'s Website,located at sukar.com.</string>
+    <string name="sub_total">Sub Total</string>
+    <string name="order_total">Order Total</string>
+    <string name="proceed_to_checkout">Proceed To Checkout</string>
+    <string name="no_products_in_cart">No Products in Cart</string>
+    <string name="shop">Shop</string>
+    <string name="discount_code">Discount Code</string>
+    <string name="delivery_options">Delivery Options</string>
+    <string name="quantity">Quantity</string>
+    <string name="remove">Remove</string>
+<!--    <string name="wishlist">Quantity</string>-->
+
+    <string-array name="Mobiler">
+        <item>+965</item>
+        <item>+974</item>
+        <item>+968</item>
+        <item>+966</item>
+    </string-array>
+    <string-array name="Report">
+        <item>Advice</item>
+        <item>Issue</item>
+    </string-array>
+    <string name="comp">Company Name</string>
+    <string name="floor_no">Floor number</string>
+    <string name="block_no">Address line 1</string>
+    <string name="flat_villa">Address line 2</string>
+    <string name="sel_country">Select Country</string>
+    <string name="sel_reg">Select Region</string>
+    <string name="city">City</string>
+    <string name="pincode">Zip Code</string>
+    <string name="submit">SUBMIT</string>
+    <string name="add_shipping_address">Add Shipping Address</string>
+    <string name="billing">BILLING ADDRESS</string>
+    <string name="shipping">SHIPPING ADDRESS</string>
+    <string name="done">DONE</string>
+    <string name="faq">FREQUENTLY ASKED QUESTIONS</string>
+    <string name="order_issue">ORDER \10 ISSUE</string>
+    <string name="gift_vouchers">PAYMENT, PROMOS \10 &amp; GIFT VOUCHERS</string>
+    <string name="del_details">DELIVERY \10 DETAILS</string>
+    <string name="return_refund">RETURNS &amp;\10 REFUNDS</string>
+    <string name="product_stock">PRODUCT &amp;\10 STOCK</string>
+    <string name="technical">TECHNICAL \10 ISSUE</string>
+    <string name="Ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="nuts_fruits"><![CDATA[NUTS & FRUITS]]></string>
+    <string name="candies_sugar"><![CDATA[CANDIES & SUGAR]]></string>
+    <string name="savories"><![CDATA[SAVORIES & SALTIES]]></string>
+    <string name="pies"><![CDATA[PIES & TARTS]]></string>
+    <string name="puddings">Moltens></string>
+    <string name="eastern">EASTERN SWEETS</string>
+    <string name="pancakes"><![CDATA[PANCAKES & Donuts]]></string>
+    <string name="diya_5">Gifts</string>
+    <string name="gath">GATHERINGS</string>
+    <string name="accessories">ACCESSORIES</string>
+    <string name="youmay">YOU MAY ALSO LIKE</string>
+    <string-array name="sizes">
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+    </string-array>
+    <string-array name="qtys">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="timings">
+        <item>6AM - 8AM</item>
+        <item>8AM - 10AM</item>
+        <item>10AM - 12PM</item>
+        <item>2PM - 4PM</item>
+        <item>4PM - 6PM</item>
+        <item>6PM - 8PM</item>
+        <item>8PM - 10PM</item>
+        <item>10PM - 12AM</item>
+
+    </string-array>
+
+    <string name="msg_no_internet">Internet connection not found</string>
+    <string name="msg_no_internet_ar">اتصال الإنترنت غير موجود</string>
+
+
+    <string name="ok">Ok</string>
+    <string name="ok_ar">نعم</string>
+
+
+    <string name="are_you_sure_you_want_to_delete_">Are you sure you want to delete?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="are_you_sure_you_want_to_delete_ar_">هل أنت متأكد أنك تريد حذفه؟</string>
+    <string name="yes_ar">نعم</string>
+    <string name="no_ar">لا</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="governorate">Governorate</string>
+    <string name="area">Area</string>
+    <string name="block">Block</string>
+    <string name="street">Street</string>
+    <string name="building_no">Building No</string>
+    <string name="floor">Floor</string>
+    <string name="description">Description</string>
+    <string name="add_delivery_address">Add Delivery Address</string>
+    <string name="delivery_charge">Delivery Charge</string>
+    <string name="knet">Knet</string>
+    <string name="visa_master">Visa/Master</string>
+    <string name="cash_on_delivery">Cash on Delivery</string>
+    <string name="status">Status</string>
+    <string name="details">Details</string>
+    <string name="orders">Orders</string>
+    <string name="total_">Total:</string>
+    <string name="item">Item</string>
+    <string name="price">Price</string>
+    <string name="total_price">Total Price</string>
+    <string name="address_">Address:</string>
+    <string name="application_request">Application Request</string>
+    <string name="to_open_a_store_in_sukar_app_fill_out_the_application_below_application_review_can_take_upto_7_working_days_once_approved_a_sukar_team_member_will_be_contacting_you">To open a store in Sukar App, fill out the application below. Application review can take upto 7 working days. Once approved, A Sukar Team member will be contacting you.</string>
+    <string name="company_name">Company Name</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="year_of_establishment">Year of Establishment</string>
+    <string name="speciality_food_type">Speciality Food Type</string>
+    <string name="website">Website</string>
+    <string name="social_media_accounts">Social Media Accounts</string>
+    <string name="open_a_store">Open a Store</string>
+
+</resources>

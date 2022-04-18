@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_dialog_background"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/alertTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/avenir_next_regular"
+        android:padding="15dp" />
+
+    <TextView
+        android:id="@+id/alertMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/alertTitle"
+        android:text="No Internet Connection"
+        android:singleLine="false"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:textStyle="normal"
+        android:fontFamily="@font/avenir_next_regular"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/viewAlert"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/alertMessage"
+        android:background="#A9A9A9"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/viewAlert">
+
+        <TextView
+            android:id="@+id/okText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ok"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textColor="#0080FF"
+            android:textStyle="normal"
+            android:fontFamily="@font/avenir_next_regular"
+            android:padding="0dp"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

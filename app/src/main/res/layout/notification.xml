@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.CartFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/header_bg" />
+
+        <include
+            android:id="@+id/toolbar_v_one"
+            layout="@layout/toolbar_v_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="SUKAR"
+            android:visibility="gone"
+            android:textSize="@dimen/_50sdp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textl"
+           android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="NOTIFICATIONS"
+            android:textSize="@dimen/_25sdp">
+
+        </TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/rl"
+
+        >
+        <TextView
+            android:id="@+id/newnot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="New Bakery"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Please click here"
+            android:layout_below="@+id/newnot"
+            android:textStyle="normal"
+            android:textSize="@dimen/_12sdp">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="View Store"
+            android:textColor="#EFB60A"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/newnot"
+            android:textStyle="normal"
+            android:textSize="@dimen/_12sdp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

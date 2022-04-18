@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_200sdp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:visibility="visible"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_centerVertical="true"
+
+            android:src="@drawable/whishlistimg1"
+            >
+
+        </ImageView>
+        <RelativeLayout
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/heartcircle"
+            android:layout_marginTop="@dimen/_50sdp"
+            >
+
+
+            <ImageView
+                android:id="@+id/hearticon"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/hearticon"
+                android:layout_centerInParent="true"
+                >
+
+            </ImageView>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="Green Almond Dragees">
+
+        </TextView>
+        <TextView
+            android:id="@+id/charge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="KWD 1.000">
+
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.OpenastroreFragment">
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/header_bg" />
+
+        <include
+            android:id="@+id/toolbar_v_one"
+            layout="@layout/toolbar_v_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/btnback"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/backicon"
+            android:layout_marginLeft="@dimen/_10sdp"
+            >
+
+        </ImageView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OPEN A STORE"
+           android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+            android:textSize="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_80sdp"
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/appl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:text="Application Request From"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/openl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/appl"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="To open a store in sukar Boutique,fill out the application below.Application review can take up to 7 working days.Once approved, a sukar Team member will be contacting you."
+                android:textSize="@dimen/_12sdp">
+
+            </TextView>
+            <RelativeLayout
+                android:id="@+id/company"
+                android:layout_below="@+id/openl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/fname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Company Name">
+
+                </TextView>
+                <EditText
+                    android:layout_below="@+id/fname"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="match_parent"
+                    android:hint="@string/companyname"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </EditText>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rltt"
+                android:layout_below="@+id/company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Contact">
+
+                </TextView>
+                <EditText
+                    android:layout_below="@+id/contact"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="match_parent"
+                    android:hint="@string/contactnor"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </EditText>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/mobilerl"
+                android:layout_below="@+id/rltt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Mobile">
+
+                </TextView>
+                <EditText
+                    android:id="@+id/nine"
+                    android:layout_below="@+id/mobile"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="@dimen/_80sdp"
+                    android:hint="+965"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </EditText>
+                <EditText
+                    android:layout_below="@+id/mobile"
+                    android:layout_toRightOf="@+id/nine"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="match_parent"
+                    android:hint="66368963"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </EditText>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/emailrl"
+                android:layout_below="@+id/mobilerl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Email">
+
+                </TextView>
+                <EditText
+                    android:layout_below="@+id/email"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="match_parent"
+                    android:hint="@string/email"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </EditText>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/year"
+                android:layout_below="@+id/emailrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+                <TextView
+                    android:id="@+id/yeart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Year of Establishment">
+
+                </TextView>
+                <EditText
+                    android:layout_below="@+id/yeart"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="match_parent"
+                    android:hint="2006"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </EditText>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/food"
+                android:layout_below="@+id/year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Specialty Food Type">
+
+                </TextView>
+                <EditText
+                    android:layout_below="@+id/type"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="match_parent"
+                    android:hint="Traditional Kuwait Desserts"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </EditText>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/web"
+                android:layout_below="@+id/food"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+                <TextView
+                    android:id="@+id/wbsite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Website/Social Media Accounts">
+
+                </TextView>
+                <EditText
+                    android:layout_below="@+id/wbsite"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="match_parent"
+                    android:hint="Website/Social Media Accounts"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </EditText>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/category"
+                android:layout_below="@+id/web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+                <TextView
+                    android:id="@+id/apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Category (all that apply)">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_below="@+id/apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2"
+                    >
+                <TextView
+                    android:id="@+id/cook"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="@dimen/_100sdp"
+                    android:text="COOKIES"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </TextView>
+                    <TextView
+                        android:id="@+id/choco"
+                        android:layout_toRightOf="@+id/cook"
+                        android:background="@drawable/rectanglebg"
+                        android:layout_width="@dimen/_100sdp"
+                        android:text="CHOCOLATE"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:layout_height="@dimen/_40sdp">
+
+                    </TextView>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/desert"
+                android:layout_below="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+                <TextView
+                    android:id="@+id/scco"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="@dimen/_100sdp"
+                    android:text="SCOOPED DESSERTS"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </TextView>
+                <TextView
+android:id="@+id/sweet"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="@dimen/_100sdp"
+                    android:text="SWEET PASTRIES"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/savoti"
+                android:layout_below="@+id/desert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+                <TextView
+                    android:id="@+id/sav"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="@dimen/_100sdp"
+                    android:text="SAVORIES &amp; SALTIES"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/pies"
+                    android:layout_toRightOf="@+id/sav"
+                    android:background="@drawable/rectanglebg"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="PIES &amp;TARTS"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </TextView>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/nextbtn"
+
+                android:background="@drawable/rectanglebg"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/savoti"
+                android:text="NEXT"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_height="@dimen/_40sdp">
+
+            </TextView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

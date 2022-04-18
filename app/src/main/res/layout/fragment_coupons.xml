@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.CouponsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:scaleType="fitXY"-->
+<!--            app:srcCompat="@drawable/header_bg" />-->
+
+<!--        <include-->
+<!--            android:id="@+id/toolbar_v_one"-->
+<!--            layout="@layout/toolbar_v_one"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:visibility="visible" />-->
+<!--        <ImageView-->
+<!--            android:id="@+id/btnback"-->
+<!--            android:layout_marginTop="@dimen/_50sdp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/_30sdp"-->
+<!--            android:src="@drawable/backicon"-->
+<!--            android:layout_marginLeft="@dimen/_10sdp"-->
+<!--            >-->
+
+<!--        </ImageView>-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="COUPONS"-->
+<!--           android:layout_marginTop="@dimen/_50sdp"-->
+<!--            android:textSize="@dimen/_20sdp"-->
+
+<!--            android:layout_centerHorizontal="true"-->
+<!--            >-->
+
+<!--        </TextView>-->
+
+<!--    </RelativeLayout>-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rlvcouponslist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    />
+
+           <!-- <RelativeLayout
+                android:id="@+id/rls"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rl">
+    <RelativeLayout
+        android:id="@+id/skprl"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/btn">
+        <TextView
+            android:id="@+id/skp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SKR25"
+            android:layout_centerInParent="true"
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/up"
+        android:layout_below="@+id/skprl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Up to 25% off on all purchases"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        >
+
+    </TextView>
+    <TextView
+        android:id="@+id/util"
+        android:layout_below="@+id/up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valid until 25 Feb 2021"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        >
+
+    </TextView>
+
+
+
+            </RelativeLayout>
+                <TextView
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/sand"
+                    android:layout_below="@id/rls">
+
+                </TextView>
+            <RelativeLayout
+                android:id="@+id/two"
+                android:layout_below="@+id/rls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/skl"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/btn">
+                <TextView
+                    android:id="@+id/skpt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SKR25"
+                    android:layout_centerInParent="true"
+                    >
+
+                </TextView>
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/to"
+                android:layout_below="@+id/skl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Up to 26% off on all purchases"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/till"
+                android:layout_below="@+id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valid until 26 Feb 2021"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                >
+
+            </TextView>
+
+
+            </RelativeLayout>
+                <TextView
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/sand"
+                    android:layout_below="@id/two">
+
+                </TextView>
+                <RelativeLayout
+                    android:id="@+id/three"
+                    android:layout_below="@+id/two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/sklthree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:background="@drawable/btn">
+                        <TextView
+                            android:id="@+id/skptt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="JOIN123"
+                            android:layout_centerInParent="true"
+                            >
+
+                        </TextView>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/K"
+                        android:layout_below="@+id/sklthree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Up to 10KWD off on all purchases"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        >
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/tillt"
+                        android:layout_below="@+id/K"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Valid until 30 Sep 2021"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        >
+
+                    </TextView>
+
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/sand"
+                    android:layout_below="@id/three">
+
+                </TextView>
+                <RelativeLayout
+                    android:id="@+id/four"
+                    android:layout_below="@+id/three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/threerl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:background="@drawable/btn">
+                        <TextView
+                            android:id="@+id/m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NVMBR"
+                            android:layout_centerInParent="true"
+                            >
+
+                        </TextView>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/nov"
+                        android:layout_below="@+id/threerl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Up to 10KWD off on all purchases"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        >
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/valid"
+                        android:layout_below="@+id/nov"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Valid until 30 Sep 2021"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        >
+
+                    </TextView>
+
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/sand"
+                    android:layout_below="@id/four">
+
+                </TextView>-->
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

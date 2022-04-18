@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:id="@+id/skprl"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@drawable/btn">
+            <TextView
+                android:id="@+id/skr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SKR25"
+                android:layout_centerInParent="true"
+                >
+
+            </TextView>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/upto"
+            android:layout_below="@+id/skprl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Up to 25% off on all purchases"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            >
+
+        </TextView>
+        <TextView
+            android:id="@+id/until"
+            android:layout_below="@+id/upto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valid until 25 Feb 2021"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            >
+
+        </TextView>
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/sand"
+        android:layout_below="@id/rls">
+
+    </TextView>
+
+
+</RelativeLayout>

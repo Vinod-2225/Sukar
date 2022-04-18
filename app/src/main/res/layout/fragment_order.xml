@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/header_bg" />
+
+                <include
+                    android:id="@+id/toolbar_v_one"
+                    layout="@layout/toolbar_v_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/btnback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:src="@drawable/backicon">
+
+                </ImageView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_110sdp"
+
+                    android:text="ORDERS"
+                    android:textSize="@dimen/_25sdp">
+
+                </TextView>
+
+            </RelativeLayout>
+              <RelativeLayout
+                android:id="@+id/rlm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rl"
+                  android:layout_margin="@dimen/_10sdp"
+
+
+                >
+
+            <RelativeLayout
+                android:id="@+id/rlml"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+
+                android:background="@drawable/rectanglebg"
+
+                >
+
+                <TextView
+                    android:id="@+id/lulu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="Lulu Cherie"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/lineone"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@color/sand">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lulu"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="STATUS"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/prepared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/status"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="PREPARED"
+                    android:textColor="#4CAF50"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:id="@+id/orderrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/mon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="right"
+
+                        android:text="Mon 21/09/2020"
+                        android:textSize="@dimen/_12sdp">
+
+                    </TextView>
+
+                    <RelativeLayout
+                        android:id="@+id/detailsrl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mon"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_20sdp">
+
+
+                        <TextView
+                            android:id="@+id/details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="Details"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/detailsline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/details"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/black"
+                            android:text="cccccc"
+                            android:textSize="@dimen/_12sdp">
+
+                        </TextView>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@+id/rlml"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/rectanglebg"
+
+                >
+
+                <TextView
+                    android:id="@+id/brown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="Brown Diamond"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/linetwo"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@color/sand">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/statust"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/brown"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="STATUS"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/deli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/statust"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="OUT FOR DELIVERY"
+                    android:textColor="#4CAF50"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:id="@+id/orderl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/mont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="right"
+
+                        android:text="Mon 21/09/2020"
+                        android:textSize="@dimen/_12sdp">
+
+                    </TextView>
+
+                    <RelativeLayout
+
+                        android:id="@+id/detailsrl1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mont"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/detailst"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="Details"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/detailsline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/detailst"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/black"
+                            android:text="cccccc"
+                            android:textSize="@dimen/_12sdp">
+
+                        </TextView>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlr"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@+id/rlt"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/rectanglebg"
+
+                >
+
+                <TextView
+                    android:id="@+id/nagwa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="Nagwa"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/linethree"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@color/sand">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/statustt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nagwa"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="STATUS"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/complte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/statustt"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="COMPLETE"
+                    android:textColor="#4CAF50"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:id="@+id/cplt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/sun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="right"
+
+                        android:text="Sun 13/09/2020"
+                        android:textSize="@dimen/_12sdp">
+
+                    </TextView>
+
+                    <RelativeLayout
+
+                        android:id="@+id/detailsrl2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sun"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/detailstt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="right"
+                            android:text="Details"
+                            android:textColor="@color/black"
+
+                            android:textSize="@dimen/_12sdp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/detailsline2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/detailstt"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/black"
+                            android:text="cccccc"
+                            android:textSize="@dimen/_12sdp">
+
+                        </TextView>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlrl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@+id/rlr"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/rectanglebg"
+
+                >
+
+                <TextView
+                    android:id="@+id/choco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="Choco Cave"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/linefour"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@color/sand">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/statusttt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/choco"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="STATUS"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/canceld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/statusttt"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="CANCELLED"
+                    android:textColor="#ff0000"
+                    android:textSize="@dimen/_12sdp">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:id="@+id/cancl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="right"
+
+                        android:text="Tue 01/09/2020"
+                        android:textSize="@dimen/_12sdp">
+
+                    </TextView>
+<RelativeLayout
+
+                        android:id="@+id/detailsrl3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+    android:layout_below="@+id/tue"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="@dimen/_20sdp">
+                    <TextView
+                        android:id="@+id/detailsttt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="right"
+                        android:text="Details"
+android:textColor="@color/black"
+
+                        android:textSize="@dimen/_12sdp">
+
+                    </TextView>
+    <TextView
+        android:id="@+id/detailsline3"
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/detailsttt"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/black"
+        android:text="cccccc"
+        android:textSize="@dimen/_12sdp">
+
+    </TextView>
+
+</RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

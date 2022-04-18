@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:layout_marginTop="0dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/application_request"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_open_a_store_in_sukar_app_fill_out_the_application_below_application_review_can_take_upto_7_working_days_once_approved_a_sukar_team_member_will_be_contacting_you"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/company_name"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/companyNameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint=""
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_bg_1"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_name"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/contactNameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint=""
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_bg_1"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mobile"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/mobileNoEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint=""
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_bg_1"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/emailEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint=""
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_bg_1"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year_of_establishment"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/yearOfEstablishmentEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint=""
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_bg_1"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/speciality_food_type"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/specialityFoodTypeEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint=""
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_bg_1"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/website"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/websiteEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint=""
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_bg_1"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/social_media_accounts"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/socialMediaAccountsEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint=""
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_next_regular"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_bg_1"
+                android:layout_marginTop="8dp"/>
+
+
+            <Button
+                android:id="@+id/btnSubmit"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg_2"
+                android:fontFamily="@font/avenir_next_regular"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
