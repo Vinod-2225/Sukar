@@ -22,7 +22,7 @@ import com.rcd.bato.models.ourServices.AreaResponse
 import com.rcd.bato.models.ourServices.GovernorateResponse
 import java.util.ArrayList
 
-class Hi : BaseFragment(), ApiCallListener, View.OnClickListener {
+class HiFragment : BaseFragment(), ApiCallListener, View.OnClickListener {
     var rootView: View? = null
     var savedInstanceState: Bundle? = null
 
