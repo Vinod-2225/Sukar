@@ -358,4 +358,11 @@ interface ApiInterface {
 
     ): Call<ResponseBody>
 
+
+    //31
+    @GET(ApiConstants.API_END_POINT.FAQS_CATEGORY)
+    fun getFaqCategories(
+
+    ): Call<ResponseBody>
+
 }

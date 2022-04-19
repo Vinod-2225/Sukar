@@ -1,88 +1,208 @@
 package com.designmaster.sukar.fragments
 
 
+import android.app.Dialog
+import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.designmaster.sukar.R
-import com.designmaster.sukar.util.BaseFragment
+import com.designmaster.sukar.activities.MainActivity
+import com.designmaster.sukar.adapters.CartAdapter
+import com.designmaster.sukar.adapters.FaqsCateAdapter
+import com.designmaster.sukar.models.CartInfo
+import com.designmaster.sukar.models.FaqCategoryDataField
+import com.designmaster.sukar.models.FaqCategoryResponse
+import com.designmaster.sukar.models.OpenStoreResponse
+import com.designmaster.sukar.util.*
+import java.util.ArrayList
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class FAQsFragment : BaseFragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class FAQsFragment : BaseFragment(), ApiCallListener, View.OnClickListener {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    var rootView: View? = null
+
+    var faqsCategoriesRecyclerView: RecyclerView? = null
+
+
+    private var faqsCateList = ArrayList<FaqCategoryDataField>()
+
+    var faqsAdapter: FaqsCateAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        if (AppPrefs.isLocaleEnglish(activity)) {
+            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.faq),true)
+        } else {
+            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.faq),true)
+        }
+
         // Inflate the layout for this fragment
-        val view = inflater.inflate(
-            R.layout.faqs,
-            container, false
+        if (rootView == null) {
 
+            rootView = inflater.inflate(R.layout.faqs_fragment, container, false)
+
+
+            idMappings()
+            setOnClickListeners()
+            getFaqCategories()
+//            myOrders()
+
+        }
+        return rootView
+    }
+
+    private fun idMappings() {
+
+
+        faqsCategoriesRecyclerView = rootView!!.findViewById<View>(R.id.faqsCategoriesRecyclerView) as RecyclerView
+        val mLayoutManager: RecyclerView.LayoutManager = GridLayoutManager(context, 2)
+        faqsCategoriesRecyclerView!!.layoutManager = mLayoutManager
+        faqsCategoriesRecyclerView!!.addItemDecoration(GridSpacingItemDecoration(2, dpToPx(5), true))
+        faqsCategoriesRecyclerView!!.itemAnimator = DefaultItemAnimator()
+
+        faqsAdapter = FaqsCateAdapter(activity, faqsCateList)
+        faqsCategoriesRecyclerView!!.adapter = faqsAdapter
+
+        faqsAdapter!!.setOnClickListener(object : FaqsCateAdapter.ClickListener {
+            override fun OnItemClick(position: Int, v: View?) {
+
+//                    val fragment1 = SubCategory1Fragment()
+//                    val bundle1 = Bundle()
+//                    bundle1.putString("CategoryId", bagArrayList.get(position).categoryID)
+//                    bundle1.putString("CategoryName", bagArrayList.get(position).categoryName)
+//                    fragment1.setArguments(bundle1)
+//                    (activity as MainActivity?)!!.supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragment1).addToBackStack(null).commit()
+            }
+
+
+        })
+
+    }
+
+    private fun setOnClickListeners() {
+
+    }
+
+
+    override fun onClick(v: View) {
+        when (v.id) {
+
+
+        }
+
+    }
+
+
+    private fun getFaqCategories() {
+        showProgress()
+        RetrofitApiCall.hitApi(
+            ApiClient.apiInterFace.getFaqCategories(
+
+            ),
+            this,
+            ApiConstants.REQUEST_CODE.FAQS_CATEGORY
         )
-        findviewbyid(view)
-        return view
     }
 
-    private fun findviewbyid(view: View) {
-//        view.setFocusableInTouchMode(true);
-//        view.requestFocus();
-//        view.setOnKeyListener(object : View.OnKeyListener {
-//            override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
-//                if (event.action == KeyEvent.ACTION_DOWN) {
-//                    if (keyCode == KeyEvent.KEYCODE_BACK) {
-//                        HomeActivity.botttomappbar.visibility=View.VISIBLE
-//                        val fragment = AccountFragment()
-//                        (activity as HomeActivity?)!!.supportFragmentManager.beginTransaction().replace(
-//                            R.id.fragment_container,
-//                            fragment
-//                        ).addToBackStack(null).commit()
-//                        return true
-//                    }
-//                }
-//                return false
-//            }
-//        })
+    override fun onSuccess(response: String, requestCode: Int) {
 
+        when (requestCode) {
 
-    }
+            ApiConstants.REQUEST_CODE.FAQS_CATEGORY -> {
+                val apiResponse = RetrofitApiCall.getPayload(FaqCategoryResponse::class.java, response)
+                if (apiResponse.output.success == 1) {
 
+                    faqsCateList.addAll(apiResponse.output.dataField)
+                    faqsAdapter!!.notifyDataSetChanged()
+                }else if (apiResponse.output.success == 0) {
 
-
-    companion object {
-        @kotlin.jvm.JvmField
-        var comingfromhome: Boolean = false
-
-
-
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+//hhhhh
                 }
             }
+
+        }
+
+        hideProgress()
+//        showNoData()
+    }
+
+    override fun onError(response: String, requestCode: Int) {
+        showToast(response)
+        hideProgress()
+    }
+
+
+    private fun alertDialog(context: Context, msg: String?) {
+        val dialog = Dialog(context)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        if (AppPrefs.isLocaleEnglish(activity)) {
+            dialog.setContentView(R.layout.alert_dialog_box)
+        }else{
+            dialog.setContentView(R.layout.alert_dialog_box_ar)
+        }
+        val layoutParams = dialog.window!!.attributes
+        layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT
+        layoutParams.width = WindowManager.LayoutParams.WRAP_CONTENT
+        dialog.window!!.attributes = layoutParams
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.setCancelable(true)
+        val alertMessage = dialog.findViewById<View>(R.id.alertMessage) as TextView
+        alertMessage.text = msg
+        val okText = dialog.findViewById<View>(R.id.okText) as TextView
+
+        if (AppPrefs.isLocaleEnglish(activity)) {
+            okText.text = context.getString(R.string.ok)
+        } else {
+            okText.text = context.getString(R.string.ok_ar)
+        }
+        okText.setOnClickListener {
+            dialog.dismiss()
+            requireActivity().supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        }
+        dialog.show()
+    }
+
+
+    private fun errorDialog(context: Context, msg: String?) {
+        val dialog = Dialog(context)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        if (AppPrefs.isLocaleEnglish(activity)) {
+            dialog.setContentView(R.layout.alert_dialog_box)
+        }else{
+            dialog.setContentView(R.layout.alert_dialog_box_ar)
+        }
+        val layoutParams = dialog.window!!.attributes
+        layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT
+        layoutParams.width = WindowManager.LayoutParams.WRAP_CONTENT
+        dialog.window!!.attributes = layoutParams
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.setCancelable(true)
+        val alertMessage = dialog.findViewById<View>(R.id.alertMessage) as TextView
+        alertMessage.text = msg
+        val okText = dialog.findViewById<View>(R.id.okText) as TextView
+
+        if (AppPrefs.isLocaleEnglish(activity)) {
+            okText.text = context.getString(R.string.ok)
+        } else {
+            okText.text = context.getString(R.string.ok_ar)
+        }
+        okText.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
     }
 }
