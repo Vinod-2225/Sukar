@@ -4,15 +4,15 @@
     android:layout_height="wrap_content"
     android:padding="0dp"
     android:orientation="vertical"
-    android:id="@+id/itemLayout">
+    android:id="@+id/itemLayout"
+    android:background="#f1f1f3">
 
     <LinearLayout
         android:id="@+id/cateImgLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:background="#f1f1f3"
+        android:layout_margin="20dp"
+        android:padding="0dp"
         android:orientation="vertical"
         android:layout_centerInParent="true">
 
@@ -27,13 +27,13 @@
             android:id="@+id/lblCateName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Strawberry Rose Donut"
+            android:text="@string/faq_s"
             android:textSize="14sp"
             android:textColor="@color/black"
             android:textStyle="normal"
-            android:singleLine="true"
+            android:singleLine="false"
             android:fontFamily="@font/avenir_next_regular"
-            android:layout_margin="15dp"
+            android:layout_marginTop="15dp"
             android:layout_gravity="center_horizontal"
             android:gravity="center"/>
 

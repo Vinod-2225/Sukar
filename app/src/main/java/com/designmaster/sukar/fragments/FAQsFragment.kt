@@ -45,9 +45,9 @@ class FAQsFragment : BaseFragment(), ApiCallListener, View.OnClickListener {
     ): View? {
 
         if (AppPrefs.isLocaleEnglish(activity)) {
-            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.faq),true)
+            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.faq_s),true)
         } else {
-            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.faq),true)
+            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.faq_s),true)
         }
 
         // Inflate the layout for this fragment
@@ -71,7 +71,7 @@ class FAQsFragment : BaseFragment(), ApiCallListener, View.OnClickListener {
         faqsCategoriesRecyclerView = rootView!!.findViewById<View>(R.id.faqsCategoriesRecyclerView) as RecyclerView
         val mLayoutManager: RecyclerView.LayoutManager = GridLayoutManager(context, 2)
         faqsCategoriesRecyclerView!!.layoutManager = mLayoutManager
-        faqsCategoriesRecyclerView!!.addItemDecoration(GridSpacingItemDecoration(2, dpToPx(5), true))
+        faqsCategoriesRecyclerView!!.addItemDecoration(GridSpacingItemDecoration(2, dpToPx(15), true))
         faqsCategoriesRecyclerView!!.itemAnimator = DefaultItemAnimator()
 
         faqsAdapter = FaqsCateAdapter(activity, faqsCateList)

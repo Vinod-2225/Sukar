@@ -43,6 +43,7 @@ class FaqsCateAdapter(mActivity: Activity?, mList: ArrayList<FaqCategoryDataFiel
         var cateImg: ImageView = itemView.findViewById<View>(R.id.cateImg) as ImageView
         var lblCateName: TextView = itemView.findViewById<View>(R.id.lblCateName) as TextView
 
+        var itemLayout: RelativeLayout = itemView.findViewById(R.id.itemLayout) as RelativeLayout
 
         init {
 
@@ -101,7 +102,10 @@ class FaqsCateAdapter(mActivity: Activity?, mList: ArrayList<FaqCategoryDataFiel
         // - get element from your dataset at this position
         // - replace the contents of the view with that element holder1.imgLike.setTag(position);
         holder1.cateImgLayout.layoutParams.width = (AppPrefs.get_device_width(mContext!!) / 2) - 50
-        holder1.cateImgLayout.layoutParams.height = (AppPrefs.get_device_width(mContext!!) / 2) - 100
+        holder1.cateImgLayout.layoutParams.height = (AppPrefs.get_device_width(mContext!!) / 3)
+
+//        holder1.cateImgLayout.layoutParams.width = (AppPrefs.get_device_width(mContext!!) / 2) - 50
+//        holder1.cateImgLayout.layoutParams.height = (AppPrefs.get_device_width(mContext!!) / 2)
 
         holder1.cateImg.layoutParams.width = (AppPrefs.get_device_width(mContext!!) / 3) - 100
         holder1.cateImg.layoutParams.height = (AppPrefs.get_device_width(mContext!!) / 3) - 100
