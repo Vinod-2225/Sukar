@@ -95,7 +95,9 @@ lateinit var termscond:LinearLayout
                 strcntrycode,
                 strmobilenor,
                 strpwd,
-                strcnfpwd
+                strcnfpwd,
+                "1234567890",
+                "android"
 
 
             ),

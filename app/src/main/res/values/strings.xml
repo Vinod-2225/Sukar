@@ -166,5 +166,10 @@
     <string name="website">Website</string>
     <string name="social_media_accounts">Social Media Accounts</string>
     <string name="open_a_store">Open a Store</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="contact_us_">Contact Us:</string>
+    <string name="to_reach_us_please_contact_us_live_chat_sukar_app_or_contact_us_out_whats_app_965_xxxxxxxx">To reach us please contact us live chat sukar app. or contact us out whats app +965 xxxxxxxx</string>
+    <string name="name">Name</string>
+    <string name="comments">Comments</string>
 
 </resources>

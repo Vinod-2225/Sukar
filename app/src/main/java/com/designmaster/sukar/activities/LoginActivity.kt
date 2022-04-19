@@ -63,7 +63,8 @@ class LoginActivity : BaseActivity(), ApiCallListener, View.OnClickListener {
             ApiClient.apiInterFace.userLogin(
                 stremail,
                 strpwd,
-
+                "1234567890",
+                "android"
                 ),
             this,
             ApiConstants.REQUEST_CODE.USER_LOGIN

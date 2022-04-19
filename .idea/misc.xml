@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/contact_us_fragment.xml" value="0.3619791666666667" />
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/contactus.xml" value="0.3619791666666667" />
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/open_a_strore_fragment.xml" value="0.3619791666666667" />
         <entry key="..\:/Vinod/Work/Projects/sukar-master/app/src/main/res/drawable/add_icon.xml" value="0.18854166666666666" />
         <entry key="..\:/Vinod/Work/Projects/sukar-master/app/src/main/res/drawable/bg_1.xml" value="0.26614583333333336" />
         <entry key="..\:/Vinod/Work/Projects/sukar-master/app/src/main/res/drawable/btn_bg_1.xml" value="0.26614583333333336" />
@@ -39,7 +42,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

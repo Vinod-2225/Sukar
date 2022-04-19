@@ -33,6 +33,7 @@ object ApiConstants {
         const val MY_ORDERS = BASE_URL_STAGING + "MyOrder"
         const val MY_ORDER_DETAILS = BASE_URL_STAGING + "OrderDetails"
         const val OPEN_A_STORE = BASE_URL_STAGING + "Store"
+        const val CONTACT_US = BASE_URL_STAGING + "Contactus"
 
     }
     object REQUEST_CODE {
@@ -67,5 +68,6 @@ object ApiConstants {
         const val MY_ORDERS = 27
         const val MY_ORDER_DETAILS = 28
         const val OPEN_A_STORE = 29
+        const val CONTACT_US = 30
     }
 }

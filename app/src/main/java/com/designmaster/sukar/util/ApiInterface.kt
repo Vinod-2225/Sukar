@@ -18,7 +18,8 @@ interface ApiInterface {
         @Field("phone") phone: String,
         @Field("password") password: String,
         @Field("confpassword") confpassword: String,
-
+        @Field("device_token") device_token: String,
+        @Field("device_type") device_type: String
 
     ): Call<ResponseBody>
 
@@ -29,8 +30,9 @@ interface ApiInterface {
     fun userLogin(
 
         @Field("email") email: String,
-        @Field("password") password: String
-
+        @Field("password") password: String,
+        @Field("device_token") device_token: String,
+        @Field("device_type") device_type: String
 
     ): Call<ResponseBody>
 
@@ -339,6 +341,20 @@ interface ApiInterface {
         @Field("additional_information") additional_information: String,
         @Field("about_us") about_us: String,
         @Field("countrycode") countrycode: String
+
+    ): Call<ResponseBody>
+
+    //30
+    @FormUrlEncoded
+    @POST(ApiConstants.API_END_POINT.CONTACT_US)
+    fun contactUs(
+
+        @Field("fullname") full_name: String,
+        @Field("email") email: String,
+        @Field("countrycode") country_code: String,
+        @Field("phone") phone: String,
+        @Field("comments") comments: String,
+        @Field("date") date: String
 
     ): Call<ResponseBody>
 
