@@ -35,6 +35,11 @@ object ApiConstants {
         const val OPEN_A_STORE = BASE_URL_STAGING + "Store"
         const val CONTACT_US = BASE_URL_STAGING + "Contactus"
         const val FAQS_CATEGORY = BASE_URL_STAGING + "qnaCategory"
+        const val FAQS_ANSWERS = BASE_URL_STAGING + "qnaByCatId"
+        const val FEED_COUNT = BASE_URL_STAGING + "TotalCount"
+        const val FEED_LIST = BASE_URL_STAGING + "FeedbackList"
+        const val FEED_LIKE = BASE_URL_STAGING + "FeedLike"
+        const val FEED_SHARE = BASE_URL_STAGING + "FeedShare"
     }
     object REQUEST_CODE {
 
@@ -70,5 +75,10 @@ object ApiConstants {
         const val OPEN_A_STORE = 29
         const val CONTACT_US = 30
         const val FAQS_CATEGORY = 31
+        const val FAQS_ANSWERS = 32
+        const val FEED_COUNT = 33
+        const val FEED_LIST = 34
+        const val FEED_LIKE = 35
+        const val FEED_SHARE = 36
     }
 }

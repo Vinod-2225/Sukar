@@ -49,6 +49,13 @@ class WishListFragment : BaseFragment(), View.OnClickListener, ApiCallListener {
 
 
         )
+
+        if (AppPrefs.isLocaleEnglish(activity)) {
+            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.wishlist),false)
+        } else {
+            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.wishlist),false)
+        }
+
         findviewbyid(view)
 
 

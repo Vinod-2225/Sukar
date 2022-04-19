@@ -172,5 +172,11 @@
     <string name="name">Name</string>
     <string name="comments">Comments</string>
     <string name="faq_s">FAQ\'s</string>
+    <string name="feed">Feed</string>
+    <string name="posts">Posts</string>
+    <string name="photos">Photos</string>
+    <string name="activity">Activity</string>
+    <string name="like">Like</string>
+    <string name="share">Share</string>
 
 </resources>

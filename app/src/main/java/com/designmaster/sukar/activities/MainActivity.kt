@@ -68,12 +68,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         changeFragment(HomeFragment())
                         return@OnNavigationItemSelectedListener true
                     }
-                    R.id.navigation_my_treatments -> {
+                    R.id.navigation_wishlist -> {
 //                    bottomNavigation!!.itemIconTintList = ContextCompat.getColorStateList(this, R.color.tab_1_color)
                         changeFragment(WishListFragment())
                         return@OnNavigationItemSelectedListener true
                     }
-                    R.id.navigation_my_appointments -> {
+                    R.id.navigation_feed -> {
+//                    bottomNavigation!!.itemIconTintList = ContextCompat.getColorStateList(this, R.color.tab_1_color)
+                        changeFragment(FeedFragment())
+                        return@OnNavigationItemSelectedListener true
+                    }
+                    R.id.navigation_cart -> {
 //                    bottomNavigation!!.itemIconTintList = ContextCompat.getColorStateList(this, R.color.tab_1_color)
 //                        changeFragment(CartdetailsFragment())
                         changeFragment(CartFragmentNew())
@@ -98,10 +103,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     R.id.navigation_home -> {
 //                        changeFragment(HomeFragment())
                     }
-                    R.id.navigation_my_treatments -> {
+                    R.id.navigation_wishlist -> {
 //                        changeFragment(WhishlistFragment())
                     }
-                    R.id.navigation_my_appointments -> {
+                    R.id.navigation_feed -> {
+//                        changeFragment(WhishlistFragment())
+                    }
+                    R.id.navigation_cart -> {
 //                        changeFragment(CartdetailsFragment())
                     }
                     R.id.navigation_my_account -> {

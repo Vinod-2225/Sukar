@@ -365,4 +365,50 @@ interface ApiInterface {
 
     ): Call<ResponseBody>
 
+
+    //32
+    @FormUrlEncoded
+    @POST(ApiConstants.API_END_POINT.FAQS_ANSWERS)
+    fun faqAnswers(
+
+        @Field("qna_cat_id") qna_cat_id: String,
+
+    ): Call<ResponseBody>
+
+    //33
+    @GET(ApiConstants.API_END_POINT.FEED_COUNT)
+    fun getFeedTotalCount(
+
+    ): Call<ResponseBody>
+
+    //34
+    @GET(ApiConstants.API_END_POINT.FEED_LIST)
+    fun getFeed(
+
+    ): Call<ResponseBody>
+
+
+
+    //35
+    @FormUrlEncoded
+    @POST(ApiConstants.API_END_POINT.FEED_LIKE)
+    fun feedLike(
+
+        @Field("user_id") user_id: String,
+        @Field("feed_id") feed_id: String,
+        @Field("type") type: String
+
+        ): Call<ResponseBody>
+
+    //36
+    @FormUrlEncoded
+    @POST(ApiConstants.API_END_POINT.FEED_SHARE)
+    fun feedShare(
+
+        @Field("user_id") user_id: String,
+        @Field("comment_id") comment_id: String,
+        @Field("type") type: String
+
+    ): Call<ResponseBody>
+
 }

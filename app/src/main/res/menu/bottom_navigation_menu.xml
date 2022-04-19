@@ -7,12 +7,17 @@
         android:title="@string/home" />
 
     <item
-        android:id="@+id/navigation_my_treatments"
+        android:id="@+id/navigation_wishlist"
         android:icon="@drawable/whishlist"
         android:title="@string/wishlist" />
 
     <item
-        android:id="@+id/navigation_my_appointments"
+        android:id="@+id/navigation_feed"
+        android:icon="@drawable/feedicon"
+        android:title="@string/feed" />
+
+    <item
+        android:id="@+id/navigation_cart"
         android:icon="@drawable/cartimg"
         android:title="@string/cart" />
 

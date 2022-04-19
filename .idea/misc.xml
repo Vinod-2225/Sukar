@@ -3,15 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/drawable/bg_1.xml" value="0.211" />
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/activity_home.xml" value="0.18489583333333334" />
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/add_address_fragment.xml" value="0.3619791666666667" />
         <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/cart_fragment.xml" value="0.18489583333333334" />
         <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/cart_item_layout.xml" value="0.18489583333333334" />
         <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/contact_us_fragment.xml" value="0.3619791666666667" />
         <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/contactus.xml" value="0.3619791666666667" />
         <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/faq_page.xml" value="0.18489583333333334" />
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/faqs.xml" value="0.18489583333333334" />
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/faqs_answer_item_layout.xml" value="0.3619791666666667" />
         <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/faqs_categories_item.xml" value="0.18489583333333334" />
         <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/faqs_fragment.xml" value="0.18489583333333334" />
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/feed_fragment.xml" value="0.18489583333333334" />
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/feed_item_layout.xml" value="0.18489583333333334" />
         <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/fragment_feed.xml" value="0.18489583333333334" />
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/my_orders_item.xml" value="0.18489583333333334" />
         <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/layout/open_a_strore_fragment.xml" value="0.3619791666666667" />
+        <entry key="..\:/Vinod/Work/Projects/Sukar/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.18489583333333334" />
         <entry key="..\:/Vinod/Work/Projects/sukar-master/app/src/main/res/drawable/add_icon.xml" value="0.18854166666666666" />
         <entry key="..\:/Vinod/Work/Projects/sukar-master/app/src/main/res/drawable/bg_1.xml" value="0.26614583333333336" />
         <entry key="..\:/Vinod/Work/Projects/sukar-master/app/src/main/res/drawable/btn_bg_1.xml" value="0.26614583333333336" />
