@@ -1,7 +1,9 @@
 package com.designmaster.sukar.activities
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -9,6 +11,9 @@ import androidx.appcompat.widget.AppCompatImageView
 import com.designmaster.sukar.R
 import com.designmaster.sukar.models.SignUpResponse
 import com.designmaster.sukar.util.*
+import com.designmaster.sukar.util.AppPrefs.setDeviceToken
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 
 class RegisterActivity : BaseActivity(), ApiCallListener, View.OnClickListener {
 lateinit var termscond:LinearLayout
@@ -35,6 +40,31 @@ lateinit var termscond:LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_lo)
+
+        /*        OneSignal.startInit(this)
+                .setNotificationReceivedHandler(new NotificationReceivedHelper())
+                .setNotificationOpenedHandler(new NotificationOpenedHelper())
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init();*/
+        //Stetho.initializeWithDefaults(this);
+        //currencyCode=AppPrefs.getCurrency(context);
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w(
+                        ContentValues.TAG,
+                        "Fetching FCM registration token failed",
+                        task.exception
+                    )
+                    return@OnCompleteListener
+                }
+
+                // Get new FCM registration token
+                val token = task.result
+                setDeviceToken(this, token)
+            })
+
         initUI()
     }
 
@@ -96,7 +126,7 @@ lateinit var termscond:LinearLayout
                 strmobilenor,
                 strpwd,
                 strcnfpwd,
-                "1234567890",
+                AppPrefs.getDeviceToken(this).toString(),
                 "android"
 
 

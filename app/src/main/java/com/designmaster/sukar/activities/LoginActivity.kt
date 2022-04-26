@@ -1,10 +1,12 @@
 package com.designmaster.sukar.activities
 
 import LoginResponse
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +15,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.designmaster.sukar.R
 import com.designmaster.sukar.models.ApiResponse
 import com.designmaster.sukar.util.*
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 
 class LoginActivity : BaseActivity(), ApiCallListener, View.OnClickListener {
     lateinit var loginll: LinearLayout
@@ -28,6 +32,23 @@ class LoginActivity : BaseActivity(), ApiCallListener, View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_lonew)
+
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w(
+                        ContentValues.TAG,
+                        "Fetching FCM registration token failed",
+                        task.exception
+                    )
+                    return@OnCompleteListener
+                }
+
+                // Get new FCM registration token
+                val token = task.result
+                AppPrefs.setDeviceToken(this, token)
+            })
+
         initUI()
     }
 
@@ -63,7 +84,7 @@ class LoginActivity : BaseActivity(), ApiCallListener, View.OnClickListener {
             ApiClient.apiInterFace.userLogin(
                 stremail,
                 strpwd,
-                "1234567890",
+                AppPrefs.getDeviceToken(this).toString(),
                 "android"
                 ),
             this,

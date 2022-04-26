@@ -7,22 +7,18 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.*
-import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.designmaster.sukar.R
-import com.designmaster.sukar.activities.HomeActivity
+import com.designmaster.sukar.activities.CommentsListActivity
 import com.designmaster.sukar.activities.MainActivity
-import com.designmaster.sukar.adapters.FaqsCateAdapter
 import com.designmaster.sukar.adapters.FeedAdapter
 import com.designmaster.sukar.models.*
 import com.designmaster.sukar.util.*
-import java.util.ArrayList
-
+import kotlinx.android.synthetic.main.fragment_account.*
 
 
 class FeedFragment : BaseFragment(), ApiCallListener, View.OnClickListener {
@@ -45,9 +41,9 @@ class FeedFragment : BaseFragment(), ApiCallListener, View.OnClickListener {
     ): View? {
 
         if (AppPrefs.isLocaleEnglish(activity)) {
-            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.faq_s),true)
+            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.faq_s),false)
         } else {
-            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.feed),true)
+            (activity as MainActivity?)!!.setHeaders(resources.getString(R.string.feed),false)
         }
 
         // Inflate the layout for this fragment
@@ -95,6 +91,13 @@ class FeedFragment : BaseFragment(), ApiCallListener, View.OnClickListener {
             }
 
             override fun OnCommentsClick(position: Int) {
+
+                val mainIntent = Intent(requireActivity(), CommentsListActivity::class.java)
+                val bundle1 = Bundle()
+                bundle1.putString("FeedId", feedInfo[position].id)
+                bundle1.putString("UserId", feedInfo[position].userId)
+                mainIntent.putExtras(bundle1)
+                startActivity(mainIntent)
 
             }
 
@@ -299,4 +302,13 @@ class FeedFragment : BaseFragment(), ApiCallListener, View.OnClickListener {
         }
         dialog.show()
     }
+
+    override fun onResume() {
+        super.onResume()
+        // put your code here...
+
+        getFeed()
+    }
+
+
 }

@@ -19,6 +19,28 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="n"
         android:exported="true">
+
+        <service
+            android:name="com.designmaster.sukar.util.MyFirebaseMessagingService"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/black" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/notification_channel_id" />
+
         <activity android:name=".activities.ZoomtestActivity">
         </activity>
         <activity android:name=".activities.HomeActivity" />
@@ -37,5 +59,14 @@
         </activity>
 
         <activity android:name=".activities.MainActivity" />
+
+        <activity android:name="com.designmaster.sukar.activities.CommentsListActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme">
+
+        </activity>
+
     </application>
 </manifest>

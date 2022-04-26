@@ -411,4 +411,27 @@ interface ApiInterface {
 
     ): Call<ResponseBody>
 
+
+    //37
+    @FormUrlEncoded
+    @POST(ApiConstants.API_END_POINT.COMMENTS_LIST)
+    fun commentsList(
+
+        @Field("feed_id") feed_id: String
+
+
+    ): Call<ResponseBody>
+
+
+    //37
+    @FormUrlEncoded
+    @POST(ApiConstants.API_END_POINT.FEED_COMMENT)
+    fun feedComment(
+
+        @Field("user_id") user_id: String,
+        @Field("feed_id") feed_id: String,
+        @Field("comment") comment: String
+
+        ): Call<ResponseBody>
+
 }

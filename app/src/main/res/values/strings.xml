@@ -179,4 +179,9 @@
     <string name="like">Like</string>
     <string name="share">Share</string>
 
+
+    <string name="notification_channel_id">Default</string>
+    <string name="send">Send</string>
+    <string name="post">Post</string>
+
 </resources>

@@ -19,6 +19,7 @@ object AppPrefs {
     private val PREF_KEY_MOBILE = "mobileNo"
     private val PREF_KEY_LOCALE = "locale"
     private val PREF_KEY_CURRENCY_CODE = "currencyCode"
+    private val PREF_KEY_DEVICE_TOKEN = "deviceToken"
 
     fun putBoolean(ctx: Context?, key: String, value: Boolean) {
         val prefsEditor = PreferenceManager.getDefaultSharedPreferences(ctx)
@@ -198,4 +199,12 @@ object AppPrefs {
         return getString(ctx, PREF_KEY_CURRENCY_CODE, "KD") + " "
     }
 
+
+    fun getDeviceToken(ctx: Context?): String? {
+        return getString(ctx, PREF_KEY_DEVICE_TOKEN, null)
+    }
+
+    fun setDeviceToken(ctx: Context?, value: String?) {
+        putString(ctx, PREF_KEY_DEVICE_TOKEN, value)
+    }
 }

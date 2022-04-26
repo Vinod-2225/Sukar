@@ -40,6 +40,8 @@ object ApiConstants {
         const val FEED_LIST = BASE_URL_STAGING + "FeedbackList"
         const val FEED_LIKE = BASE_URL_STAGING + "FeedLike"
         const val FEED_SHARE = BASE_URL_STAGING + "FeedShare"
+        const val COMMENTS_LIST = BASE_URL_STAGING + "CommentList"
+        const val FEED_COMMENT = BASE_URL_STAGING + "FeedComment"
     }
     object REQUEST_CODE {
 
@@ -80,5 +82,7 @@ object ApiConstants {
         const val FEED_LIST = 34
         const val FEED_LIKE = 35
         const val FEED_SHARE = 36
+        const val COMMENTS_LIST = 37
+        const val FEED_COMMENT = 38
     }
 }
