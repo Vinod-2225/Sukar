@@ -14,6 +14,7 @@ import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.designmaster.sukar.R
 import com.designmaster.sukar.models.ApiResponse
+import com.designmaster.sukar.models.SignInResponse
 import com.designmaster.sukar.util.*
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
@@ -172,7 +173,7 @@ class LoginActivity : BaseActivity(), ApiCallListener, View.OnClickListener {
 
                 if (apiResponse1.output.success == 1) {
                     val apiResponse = RetrofitApiCall.getPayload(
-                        LoginResponse::class.java,
+                        SignInResponse::class.java,
                         response
                     )
                     if (apiResponse.output.success == 1) {
@@ -229,8 +230,8 @@ class LoginActivity : BaseActivity(), ApiCallListener, View.OnClickListener {
 
 
                         AppPrefs.setLoggedIn(this, true)
-                        AppPrefs.setUserId(this, apiResponse.output.data.get(0).id.toString())
-                        AppPrefs.setUserName(this, apiResponse.output.data.get(0).fname.toString()+" "+apiResponse.output.data.get(0).lname.toString())
+                        AppPrefs.setUserId(this, apiResponse.output.dataField.get(0).id)
+                        AppPrefs.setUserName(this, apiResponse.output.dataField.get(0).fname+" "+apiResponse.output.dataField.get(0).lname)
 
                         val mainIntent = Intent(this, MainActivity::class.java)
                         startActivity(mainIntent)
