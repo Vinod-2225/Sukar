@@ -130,22 +130,22 @@ class OpenastroreFragment : BaseFragment(), View.OnClickListener {
                 startActivity(mainIntent)
             }
             R.id.cook -> {
-              cookies.setBackgroundColor(resources.getColor(R.color.text_color))
+              cookies.setBackgroundColor(resources.getColor(R.color.text_black_color))
             }
             R.id.choco -> {
-                chocolate.setBackgroundColor(resources.getColor(R.color.text_color))
+                chocolate.setBackgroundColor(resources.getColor(R.color.text_black_color))
             }
             R.id.scco -> {
-                scooped.setBackgroundColor(resources.getColor(R.color.text_color))
+                scooped.setBackgroundColor(resources.getColor(R.color.text_black_color))
             }
             R.id.sweet -> {
-                sweet.setBackgroundColor(resources.getColor(R.color.text_color))
+                sweet.setBackgroundColor(resources.getColor(R.color.text_black_color))
             }
             R.id.sav -> {
-                savories.setBackgroundColor(resources.getColor(R.color.text_color))
+                savories.setBackgroundColor(resources.getColor(R.color.text_black_color))
             }
             R.id.pies -> {
-                pies.setBackgroundColor(resources.getColor(R.color.text_color))
+                pies.setBackgroundColor(resources.getColor(R.color.text_black_color))
             }
         }
     }

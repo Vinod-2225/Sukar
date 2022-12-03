@@ -51,7 +51,7 @@
                     android:inputType="textNoSuggestions"
 
                     android:textColor="@color/black"
-                    android:textColorHint="@color/text_color"
+                    android:textColorHint="@color/text_black_color"
                     android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     android:visibility="visible" />

@@ -5,8 +5,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
-import android.view.View
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.designmaster.sukar.R
 import com.designmaster.sukar.activities.LoginActivity.Companion.sharedPrefFile
@@ -14,7 +12,6 @@ import com.designmaster.sukar.util.AppConstants
 import com.designmaster.sukar.util.AppPrefs
 import com.designmaster.sukar.util.MyApplication
 import com.designmaster.sukar.util.MyPreferenceMangaer
-import kotlin.math.floor
 
 
 class SplashActivity : AppCompatActivity() {
@@ -98,7 +95,7 @@ class SplashActivity : AppCompatActivity() {
 
 
             }else{
-                val mainIntent = Intent(this@SplashActivity, LangaugeselectionActivity::class.java)
+                val mainIntent = Intent(this@SplashActivity, LanguageSelectionActivity::class.java)
                 startActivity(mainIntent)
                 finish()
             }

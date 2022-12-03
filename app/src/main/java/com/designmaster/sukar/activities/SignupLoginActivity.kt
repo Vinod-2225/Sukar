@@ -6,25 +6,37 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import com.designmaster.sukar.R
+import com.designmaster.sukar.util.AppPrefs
 
 class SignupLoginActivity : AppCompatActivity() {
-    lateinit var loginll:LinearLayout
-    lateinit var registerll:LinearLayout
-    lateinit var skipll:LinearLayout
+    lateinit var loginBtn:Button
+    lateinit var signUpBtn:Button
+    lateinit var skipBtn:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_register_lo)
+        if (AppPrefs.isLocaleEnglish(this)) {
+            setContentView(R.layout.login_register)
+        }else{
+            setContentView(R.layout.login_register_ar)
+        }
         initUI()
     }
 
     private fun initUI() {
-        loginll = findViewById<LinearLayout>(R.id.ar_acc_btn)
-        registerll = findViewById<LinearLayout>(R.id.ar_acc_btn2)
-        skipll = findViewById<LinearLayout>(R.id.skip_lo)
-        loginll.setOnClickListener(View.OnClickListener { langResult() })
-        skipll.setOnClickListener(View.OnClickListener { skipResult() })
-        registerll.setOnClickListener(View.OnClickListener { signupResult() })
+
+        loginBtn = findViewById<Button>(R.id.loginBtn)
+        signUpBtn = findViewById<Button>(R.id.signUpBtn)
+        skipBtn = findViewById<Button>(R.id.skipBtn)
+
+        loginBtn.setOnClickListener(View.OnClickListener { langResult() })
+
+        signUpBtn.setOnClickListener(View.OnClickListener { signupResult() })
+
+        skipBtn.setOnClickListener(View.OnClickListener { skipResult() })
+
     }
 
     private fun signupResult() {

@@ -1,11 +1,11 @@
 package com.designmaster.sukar.activities
 
-import LoginResponse
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -20,19 +20,28 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
 
 class LoginActivity : BaseActivity(), ApiCallListener, View.OnClickListener {
-    lateinit var loginll: LinearLayout
-    lateinit var registerll: LinearLayout
+
+    lateinit var emailEdit: EditText
+    lateinit var passwordEdit: EditText
+    lateinit var forgotPasswordTxt: TextView
+    lateinit var resetTxt: TextView
+    lateinit var loginBtn: Button
+
     lateinit var gimg: ImageView
     lateinit var fimg: ImageView
-    lateinit var forgottv: TextView
-    lateinit var email_add_edt: EditText
-    lateinit var pwd_edt: EditText
+
     var stremail: String = ""
     var strpwd: String = ""
     lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_lonew)
+
+        if (AppPrefs.isLocaleEnglish(this)) {
+            setContentView(R.layout.login_activity)
+        }else{
+            setContentView(R.layout.login_activity_ar)
+        }
+
 
         FirebaseMessaging.getInstance().token
             .addOnCompleteListener(OnCompleteListener { task ->
@@ -54,27 +63,34 @@ class LoginActivity : BaseActivity(), ApiCallListener, View.OnClickListener {
     }
 
     private fun initUI() {
-        forgottv = findViewById<TextView>(R.id.forgot_txt)
-        loginll = findViewById<LinearLayout>(R.id.loginll)
+
+        emailEdit = findViewById(R.id.emailEdit)
+        passwordEdit = findViewById(R.id.passwordEdit)
+        forgotPasswordTxt = findViewById(R.id.forgotPasswordTxt)
+        resetTxt = findViewById(R.id.resetTxt)
+        loginBtn = findViewById(R.id.loginBtn)
+
+        passwordEdit.transformationMethod = PasswordTransformationMethod()
+
         gimg = findViewById<ImageView>(R.id.google_plus_img)
         fimg = findViewById<ImageView>(R.id.facebook_img)
-        email_add_edt = findViewById<EditText>(R.id.email_add_edt)
-        pwd_edt = findViewById<EditText>(R.id.pwd_edt)
-        gimg.setOnClickListener(View.OnClickListener { langResult() })
-        fimg.setOnClickListener(View.OnClickListener { langResult() })
-        loginll.setOnClickListener(View.OnClickListener {
-            stremail = email_add_edt.text.toString()
-            strpwd = pwd_edt.text.toString()
+
+//        gimg.setOnClickListener(View.OnClickListener { langResult() })
+//        fimg.setOnClickListener(View.OnClickListener { langResult() })
+
+        loginBtn.setOnClickListener(View.OnClickListener {
+            stremail = emailEdit.text.toString()
+            strpwd = passwordEdit.text.toString()
             if (!isValidEmail(stremail)) {
-                email_add_edt!!.setError("Enter valid Email")
+                emailEdit!!.setError("Enter valid Email")
             } else if (!isValidPassword(strpwd)) {
-                pwd_edt!!.setError("Enter Password")
+                passwordEdit!!.setError("Enter Password")
             } else {
                 loginapi()
             }
             //langResult()
         })
-        forgottv.setOnClickListener(this)
+        forgotPasswordTxt.setOnClickListener(this)
 
     }
 

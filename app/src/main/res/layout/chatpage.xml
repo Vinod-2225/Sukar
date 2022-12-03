@@ -118,7 +118,7 @@ android:layout_gravity="center"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_5sdp"
                 android:text="@string/forgot_pwd"
-                android:textColor="@color/text_color"
+                android:textColor="@color/text_black_color"
                 android:textSize="@dimen/_14sdp"
                 />
 
@@ -170,7 +170,7 @@ android:layout_gravity="center"
             android:layout_marginRight="@dimen/_5sdp"
             android:paddingTop="15dp"
             android:text="@string/note_txt"
-            android:textColor="@color/text_color"
+            android:textColor="@color/text_black_color"
             android:textSize="@dimen/_14sdp"
             android:visibility="invisible"
          />
@@ -189,7 +189,7 @@ android:layout_gravity="center"
             android:layout_margin="@dimen/_5sdp"
             android:gravity="center"
             android:text="@string/or_login"
-            android:textColor="@color/text_color"
+            android:textColor="@color/text_black_color"
             android:textSize="@dimen/_14sdp"
            />
     </LinearLayout>

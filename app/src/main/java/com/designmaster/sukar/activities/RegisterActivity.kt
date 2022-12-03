@@ -154,7 +154,7 @@ lateinit var termscond:LinearLayout
     }
     override fun onBackPressed() {
         // super.onBackPressed()
-        val mainIntent = Intent(this, LangaugeselectionActivity::class.java)
+        val mainIntent = Intent(this, LanguageSelectionActivity::class.java)
         startActivity(mainIntent)
         finish()
     }
@@ -163,7 +163,7 @@ lateinit var termscond:LinearLayout
 
         when(v.id){
             R.id.backicon->{
-                val mainIntent = Intent(this, LangaugeselectionActivity::class.java)
+                val mainIntent = Intent(this, LanguageSelectionActivity::class.java)
                 startActivity(mainIntent)
                 finish()
             }
